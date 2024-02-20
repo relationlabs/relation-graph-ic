@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "relation-graph-core",
+    "relation-graph-api",
+]
+
+[profile.release]
+# Automatically strip symbols from the binary (available since 1.58 release)
+# strip = true
+
+# LTO instructs the linker to optimize at the link stage.
+# It can remove dead code and often times reduces binary size.
+lto = true
+
+# Optimize for size
+opt-level = "z"
+
+# Reduce Parallel Code Generation Units to increase optimization
+codegen-units = 1
+
+# Removes the need for extra unwinding code
+panic = "abort"

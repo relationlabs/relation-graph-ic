@@ -1,0 +1,7 @@
+PREFIX acl: <http://relationlabs.ai/acl/>
+
+ASK WHERE {
+    GRAPH <http://relationlabs.ai/acl/> {
+        acl:{{uid}} acl:id ?id .
+    }
+}

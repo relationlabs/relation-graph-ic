@@ -1,0 +1,7 @@
+service : {
+    "sparql_query": (text, text) -> (text) query;
+    "sparql_update": (text) -> (text);
+    "acl_show": (nat) -> (text) query;
+    "acl_grant": (text, text) -> (text);
+    "acl_revoke": (text) -> (text);
+}

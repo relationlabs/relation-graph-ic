@@ -1,0 +1,11 @@
+PREFIX acl: <http://relationlabs.ai/acl/>
+
+INSERT DATA {
+    GRAPH <http://relationlabs.ai/acl/> {
+         # uid: unique entity ID of a named graph
+         # id: user ID
+         # role: user role (e.g. admin, user)
+        acl:{{uid}} acl:id "{{id}}" ;
+                    acl:role "{{role}}" .
+    }
+}

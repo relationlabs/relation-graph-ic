@@ -1,0 +1,8 @@
+PREFIX acl: <http://relationlabs.ai/acl/>
+
+DELETE WHERE {
+    GRAPH <http://relationlabs.ai/acl/> {
+        # uid: unique entity ID of a named graph
+        acl:{{uid}} ?p ?o .
+    }
+}

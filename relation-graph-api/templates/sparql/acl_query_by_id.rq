@@ -1,0 +1,9 @@
+PREFIX acl: <http://relationlabs.ai/acl/>
+
+SELECT ?id ?role
+FROM <http://relationlabs.ai/acl/>
+WHERE {
+    # uid: unique entity ID of a named graph
+    acl:{{uid}} acl:id ?id ;
+                acl:role ?role .
+}

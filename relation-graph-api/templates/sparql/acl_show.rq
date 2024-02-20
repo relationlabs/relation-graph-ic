@@ -1,0 +1,9 @@
+PREFIX acl: <http://relationlabs.ai/acl/>
+
+SELECT distinct ?id ?role
+FROM <http://relationlabs.ai/acl/>
+WHERE {
+    ?s acl:id ?id ;
+       acl:role ?role .
+}
+LIMIT {{limit}}

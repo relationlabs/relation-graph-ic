@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "canisters": {
+    "relation_graph": {
+      "type": "custom",
+      "candid": "relation-graph-api/src/lib.did",
+      "wasm": "target/wasm32-unknown-unknown/release/relation-graph-api-opt.wasm",
+      "build": "./build.sh relation-graph-api relation_graph_api"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
