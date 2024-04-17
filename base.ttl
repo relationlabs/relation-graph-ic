@@ -1,0 +1,195 @@
+PREFIX : <http://relationlabs.ai/entity/>
+PREFIX p: <http://relationlabs.ai/property/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+###################
+# Schema
+###################
+
+###################
+# class
+###################
+
+:User a rdfs:Class ;
+    rdfs:label "user" ;
+    rdfs:comment "A User." .
+
+:Identity a rdfs:Class ;
+    rdfs:label "user" ;
+    rdfs:comment "A User." .
+
+:Medal a rdfs:Class ;
+    rdfs:label "user" ;
+    rdfs:comment "A User." .
+
+:Favorite a rdfs:Class ;
+    rdfs:label "user" ;
+    rdfs:comment "A User." .
+
+:Group a rdfs:Class ;
+    rdfs:label "user" ;
+    rdfs:comment "A User." .
+
+:Message a rdfs:Class ;
+    rdfs:label "user" ;
+    rdfs:comment "A User." .
+
+###################
+# common property
+###################
+
+p:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of an entity" ;
+    rdfs:range xsd:string .
+
+p:createdAt a rdf:Property ;
+    rdfs:label "createdAt" ;
+    rdfs:comment "The creation timestamp of an entity" ;
+    rdfs:range xsd:dateTime .
+
+###################
+# User property
+###################
+
+p:canisterId a rdf:Property ;
+    rdfs:label "canisterId" ;
+    rdfs:comment "The user's canisterId" ;
+    rdfs:domain :User ;
+    rdfs:range xsd:string .
+
+p:name a rdf:Property ;
+    rdfs:label "name" ;
+    rdfs:comment "The user's name" ;
+    rdfs:domain :User ;
+    rdfs:range xsd:string .
+
+p:avatar a rdf:Property ;
+    rdfs:label "avatar" ;
+    rdfs:comment "The user avatar" ;
+    rdfs:domain :User ;
+    rdfs:range xsd:string .
+
+p:following a rdf:Property ;
+    rdfs:label "following" ;
+    rdfs:comment "The user following" ;
+    rdfs:domain :User ;
+    rdfs:range :User .
+
+p:controller a rdf:Property ;
+    rdfs:label "controller" ;
+    rdfs:comment "The user's controller" ;
+    rdfs:domain :User ;
+    rdfs:range :Identity .
+
+p:hold a rdf:Property ;
+    rdfs:label "hold" ;
+    rdfs:comment "The user's medal" ;
+    rdfs:domain :User ;
+    rdfs:range :Medal .
+
+p:collect a rdf:Property ;
+    rdfs:label "collect" ;
+    rdfs:comment "The user's collect" ;
+    rdfs:domain :User ;
+    rdfs:range :Favorite .
+
+###################
+# Identity property
+###################
+
+p:principal a rdf:Property ;
+    rdfs:label "principal" ;
+    rdfs:comment "The identity's principal" ;
+    rdfs:domain :Identity ;
+    rdfs:range xsd:string .
+
+###################
+# Medal property
+###################
+
+p:image a rdf:Property ;
+    rdfs:label "image" ;
+    rdfs:comment "The medal's image" ;
+    rdfs:domain :Medal ;
+    rdfs:range xsd:string .
+
+###################
+# Favorite property
+###################
+
+p:icon a rdf:Property ;
+    rdfs:label "icon" ;
+    rdfs:comment "A icon of a Favorite" ;
+    rdfs:domain :Favorite ;
+    rdfs:range :string .
+
+p:url a rdf:Property ;
+    rdfs:label "url" ;
+    rdfs:comment "A url of a Favorite" ;
+    rdfs:domain :Favorite ;
+    rdfs:range :string .
+
+###################
+# Group property
+###################
+
+p:groupId a rdf:Property ;
+    rdfs:label "groupId" ;
+    rdfs:comment "The id of a group" ;
+    rdfs:domain :Group;
+    rdfs:range xsd:string .
+
+p:owner a rdf:Property ;
+    rdfs:label "owner" ;
+    rdfs:comment "The group's owner" ;
+    rdfs:domain :Group;
+    rdfs:range xsd:string .
+
+p:avatar a rdf:Property ;
+    rdfs:label "avatar" ;
+    rdfs:comment "The group avatar" ;
+    rdfs:domain :Group ;
+    rdfs:range xsd:string .
+
+p:member a rdf:Property ;
+    rdfs:label "member" ;
+    rdfs:comment "The group member" ;
+    rdfs:domain :Group ;
+    rdfs:range :User .
+
+p:message a rdf:Property ;
+    rdfs:label "message" ;
+    rdfs:comment "The group message" ;
+    rdfs:domain :Group ;
+    rdfs:range :Message .
+
+###################
+# Message property
+###################
+
+p:sendUuid a rdf:Property ;
+    rdfs:label "sendUuid" ;
+    rdfs:comment "The sendUuid of message" ;
+    rdfs:domain :Message ;
+    rdfs:range xsd:string .
+
+p:messageType a rdf:Property ;
+    rdfs:label "messageType" ;
+    rdfs:comment "The type of entity" ;
+    rdfs:range xsd:string .
+
+p:content a rdf:Property ;
+    rdfs:label "messageContent" ;
+    rdfs:comment "The content of message" ;
+    rdfs:domain :Message ;
+    rdfs:range xsd:string .
+
+p:from a rdf:Property ;
+    rdfs:label "from" ;
+    rdfs:comment "The from of message" ;
+    rdfs:domain :Message ;
+    rdfs:range :User .
+

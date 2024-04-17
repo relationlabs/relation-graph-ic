@@ -1,0 +1,102 @@
+.hello-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to left, #EE609C 0%, #EE609C 33%, #CF6CC9 66%, #B465DA 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 160px;
+    padding-bottom: 80px;
+}
+
+.hello-container .title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.hello-container .actions {
+    margin-bottom: 24px;
+}
+
+.hello-container .list, .hello-container .list-loading {
+    display: flex;
+    flex-direction: column;
+    min-width: 798px;
+    min-height: 248px;
+    border-radius: 16px;
+    background-color: rgba(255,255,255,0.15);
+    padding: 24px;
+}
+
+.hello-container .list .list-head, .hello-container .list .list-item {
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.hello-container .list .list-head span, .hello-container .list .list-item span {
+    flex-basis: 150px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello-container .list .list-head {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    padding-bottom: 24px;
+}
+
+.hello-container .list-loading {
+    justify-content: center;
+    align-items: center;
+}
+
+.hello-container .list-loading img {
+    width: 42px;
+    height: 42px;
+    animation: circle 1s linear infinite;
+}
+
+.rel-btn {
+    padding: 8px 24px;
+    border-radius: 1000px;
+    border: 0;
+    background-color: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    height: 38px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.rel-btn.size-small {
+    font-size: 12px;
+    line-height: 16px;
+    height: 24px;
+    padding: 4px 12px;
+}
+.rel-btn.danger-true {
+    background-color: rgb(245 34 45 / 55%);
+}
+.rel-btn.disabled {
+    opacity: 0.3;
+    cursor: auto;
+}
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

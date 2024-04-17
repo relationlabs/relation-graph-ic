@@ -19,4 +19,5 @@ Cargo.lock
 .dfx/
 
 # Custom
-backup/
+node_modules/
+build/
